@@ -46,7 +46,7 @@ namespace CoreAPIs.Controllers
         /// </summary>
         /// <param name="forecastId">The forecast identifier.</param>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet("{forecastId}")]
         public WeatherForecast GetById(int forecastId)
         {
             var rng = new Random();
