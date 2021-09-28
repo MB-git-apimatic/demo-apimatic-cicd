@@ -23,17 +23,42 @@ namespace CoreAPIs.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the Weather Forecast details.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
+                id= index,
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        /// <summary>
+        /// Get the single Weather Forecast details by id.
+        /// </summary>
+        /// <param name="forecastId">The forecast identifier.</param>
+        /// <returns></returns>
+        [HttpGet]
+        public WeatherForecast GetById(int forecastId)
+        {
+            var rng = new Random();
+            var c=  Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+
+            return c.Where(x => x.id == forecastId).FirstOrDefault();
         }
     }
 }
