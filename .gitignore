@@ -2,3 +2,4 @@
 api/.vs
 api/bin
 api/obj
+/bin/Debug/netcoreapp3.0
