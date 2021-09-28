@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CoreAPIs.Controllers
 {
+    /// <summary>
+    /// Manage Weather Forecast
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -23,6 +26,7 @@ namespace CoreAPIs.Controllers
             _logger = logger;
         }
 
+        /// GET /WeatherForecast 
         /// <summary>
         /// Gets the Weather Forecast details.
         /// </summary>
@@ -41,6 +45,7 @@ namespace CoreAPIs.Controllers
             .ToArray();
         }
 
+        /// GET /WeatherForecast/{forecastId}
         /// <summary>
         /// Get the single Weather Forecast details by id.
         /// </summary>
