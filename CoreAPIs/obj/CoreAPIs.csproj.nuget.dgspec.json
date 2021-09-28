@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Yogesh\\AzureDeops\\demo-apimatic-cicd\\CoreAPIs\\CoreAPIs.csproj": {}
+  },
+  "projects": {
+    "C:\\Yogesh\\AzureDeops\\demo-apimatic-cicd\\CoreAPIs\\CoreAPIs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Yogesh\\AzureDeops\\demo-apimatic-cicd\\CoreAPIs\\CoreAPIs.csproj",
+        "projectName": "CoreAPIs",
+        "projectPath": "C:\\Yogesh\\AzureDeops\\demo-apimatic-cicd\\CoreAPIs\\CoreAPIs.csproj",
+        "packagesPath": "C:\\Users\\Yogesh.Pangam\\.nuget\\packages\\",
+        "outputPath": "C:\\Yogesh\\AzureDeops\\demo-apimatic-cicd\\CoreAPIs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Yogesh.Pangam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://mindbody.pkgs.visualstudio.com/_packaging/Mindbody-Nuget/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/myget-legacy/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

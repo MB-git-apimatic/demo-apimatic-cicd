@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Yogesh.Pangam\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Yogesh.Pangam\\.nuget\\packages"
+    ]
+  }
+}
