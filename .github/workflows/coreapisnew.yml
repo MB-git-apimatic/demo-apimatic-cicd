@@ -37,9 +37,9 @@ jobs:
           $uri = 'https://www.apimatic.io/api/portal'
           $body = @{
             'content_type'='text/plain';
-            'header'='X-Auth-Key uTmxzngzCkKBvmtmr_LcXafvVrZIK3y-Pk4XUqKAY4L1jTXgjlvkVmbvOHt_OBF5';
+            'header'='X-Auth-Key uTmxzngzCkKBvmtmr_LcXap2h95gsSqeX0K92pc14-7oAOEgL2S3BCdX3XHBjPzK';
             'file'=[IO.File]::ReadAllBytes('${{ env.WORKING_DIRECTORY }}/APIMatic.zip')}
-          $url = Invoke-RestMethod -uri $uri -method POST -body $body
+          $url = Invoke-RestMethod -uri $uri -method POST -body $body -OutFile 
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
