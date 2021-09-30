@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: my-artifact
-        path: ${{ github.workspace }}/APIMatic.zip
+        path: ${{ env.WORKING_DIRECTORY }}/APIMatic.zip
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
