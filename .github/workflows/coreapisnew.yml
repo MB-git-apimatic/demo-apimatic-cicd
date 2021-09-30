@@ -37,7 +37,6 @@ jobs:
           $uri = 'https://www.apimatic.io/api/portal'
           $webpath = '${{ env.WORKING_DIRECTORY }}/APIMaticWeb.zip'
           $body = @{
-            'content_type'='text/plain';
             'header'='X-Auth-Key uTmxzngzCkKBvmtmr_LcXap2h95gsSqeX0K92pc14-7oAOEgL2S3BCdX3XHBjPzK';
             'file'=[IO.File]::ReadAllBytes('${{ env.WORKING_DIRECTORY }}/APIMatic.zip')}
           $url = Invoke-RestMethod -uri $uri -method POST -body $body
