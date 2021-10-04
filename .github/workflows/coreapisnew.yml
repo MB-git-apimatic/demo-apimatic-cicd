@@ -32,7 +32,7 @@ jobs:
     - name: curl
       uses: wei/curl@v1
       with:
-        args: -X POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip'
+        args: -X POST 'https://www.apimatic.io/api/portal' -H 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' -F 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip'
     - uses: Amadevus/pwsh-script@v2
       id: script
       with:
