@@ -29,6 +29,10 @@ jobs:
       with:
         name: my-artifact
         path: ${{ env.WORKING_DIRECTORY }}/APIMatic.zip
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip'
     - uses: Amadevus/pwsh-script@v2
       id: script
       with:
@@ -36,7 +40,6 @@ jobs:
           Write-ActionDebug "Upload folder to API matic"
           $uri = 'https://www.apimatic.io/api/portal'
           $webpath = '${{ env.WORKING_DIRECTORY }}/APIMaticWeb.zip'
-          Write-Output $webpath
           $body = @{
             'header'='X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus';
             'file'=[IO.File]::ReadAllBytes('${{ env.WORKING_DIRECTORY }}/APIMatic.zip')}

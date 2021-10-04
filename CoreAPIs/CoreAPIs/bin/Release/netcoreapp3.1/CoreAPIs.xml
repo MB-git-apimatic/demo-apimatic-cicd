@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreAPIs</name>
+    </assembly>
+    <members>
+        <member name="T:CoreAPIs.Controllers.WeatherForecastController">
+            <summary>
+            Manage Weather Forecast
+            </summary>
+        </member>
+        <member name="M:CoreAPIs.Controllers.WeatherForecastController.Get">
+            GET /WeatherForecast 
+            <summary>
+            Gets the Weather Forecast details.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoreAPIs.Controllers.WeatherForecastController.GetById(System.Int32)">
+            GET /WeatherForecast/{forecastId}
+            <summary>
+            Get the single Weather Forecast details by id.
+            </summary>
+            <param name="forecastId">The forecast identifier.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

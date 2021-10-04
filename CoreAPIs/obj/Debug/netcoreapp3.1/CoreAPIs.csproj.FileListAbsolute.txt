@@ -36,7 +36,6 @@ C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\Microso
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.csprojAssemblyReference.cache
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.AssemblyInfoInputs.cache
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.AssemblyInfo.cs
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.csproj.CoreCompileInputs.cache
@@ -50,3 +49,8 @@ C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPI
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.dll
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.pdb
 C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.genruntimeconfig.cache
+C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\CoreAPIs.xml
+C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\APIMatic\APIMATIC-BUILD.json
+C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\bin\Debug\netcoreapp3.1\APIMatic\spec\coreAPIs.json
+C:\Yogesh\AzureDeops\demo-apimatic-cicd\CoreAPIs\obj\Debug\netcoreapp3.1\CoreAPIs.csprojAssemblyReference.cache
