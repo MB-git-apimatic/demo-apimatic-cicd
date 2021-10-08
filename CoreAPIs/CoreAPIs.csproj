@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="APIMatic\spec\" />
+    <Folder Include="StorePortal\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
