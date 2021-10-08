@@ -30,7 +30,7 @@ jobs:
         curl --location --request POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip"' -o  "${{ env.WORKING_DIRECTORY }}/StorePortal.zip"
     - name: Decompress Portal.zip
       run: 7z x "${{ env.WORKING_DIRECTORY }}/StorePortal.zip" -o"${{ env.WORKING_DIRECTORY }}/StorePortal"
-    - uses: LanceMcCarthy/Action-AzureBlobUpload@vX.X.X
+    - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.9.0
       name: Uploading to Azure storage...
       with:
         connection_string: "DefaultEndpointsProtocol=https;AccountName=apimaticwebsite;AccountKey=e0/oWD375XtSnlEIEl5svufnsMkhsBWOOJ4fBn6g8aoUAdGX9MpqJX4sjhbJzXu+/L4b1kyfvcyH3HNWBCAbiA==;EndpointSuffix=core.windows.net"
