@@ -10,6 +10,8 @@ env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
   WORKING_DIRECTORY: CoreAPIs
+  AZURE_BLOB_CONN: ${{ secrets.AZURE_APIMATIC_CONNECTION_STRING }}
+  AZURE_BLOB_CONTAINER : apimaticwebsite
 jobs:
   build-and-deploy:
     runs-on: windows-latest
@@ -33,8 +35,8 @@ jobs:
     - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.9.0
       name: Uploading to Azure storage...
       with:
-        connection_string: "DefaultEndpointsProtocol=https;AccountName=apimaticwebsite;AccountKey=e0/oWD375XtSnlEIEl5svufnsMkhsBWOOJ4fBn6g8aoUAdGX9MpqJX4sjhbJzXu+/L4b1kyfvcyH3HNWBCAbiA==;EndpointSuffix=core.windows.net"
-        container_name: "apimaticwebsite"
+        connection_string: "${{ env.AZURE_BLOB_CONN }}"
+        container_name: "${{ env.AZURE_BLOB_CONTAINER }}" 
         source_folder: "${{ env.WORKING_DIRECTORY }}/StorePortal"
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
