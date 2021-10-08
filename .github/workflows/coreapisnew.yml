@@ -31,7 +31,7 @@ jobs:
         path: ${{ env.WORKING_DIRECTORY }}/APIMatic.zip
     - name: Trigger GitHub pages rebuild
       run: |
-        curl --location --request POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip"' --output "https://github.com/MB-git-apimatic/StorePortalZip"
+        curl --location --request POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip"' --output "https://github.com/MB-git-apimatic/StorePortalZip/"
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
