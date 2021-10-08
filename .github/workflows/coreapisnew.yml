@@ -12,7 +12,7 @@ env:
   WORKING_DIRECTORY: CoreAPIs
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -30,18 +30,18 @@ jobs:
         curl --location --request POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip"' -o  "${{ env.WORKING_DIRECTORY }}/StorePortal.zip"
     - name: Decompress Portal.zip
       run: 7z x "${{ env.WORKING_DIRECTORY }}/StorePortal.zip" -o"${{ env.WORKING_DIRECTORY }}/StorePortal"
-    - name: Upload to blob storage
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-            az storage blob upload-batch --account-name apimaticwebsite  --auth-mode key -d '$web' -s .
-    - name: Purge CDN endpoint
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-           az cdn endpoint purge --content-paths  "${{ env.WORKING_DIRECTORY }}/StorePortal" --profile-name "mbdocumentation" --name "https://mbdocumentation.azureedge.net" --resource-group "DefaultResourceGroup-CUS"
+    - name: Azure Static Web Apps Deploy
+        id: deploytoazure
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: "c2e7eaafd1b8893a34f6a23ad012429584a0abaae7e6e142823d7f835b6df8840-e4707354-0138-4f2d-8d55-1f678ff5057001038703"
+          ###repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          ###### Repository/Build Configurations ######
+          app_location: "${{ env.WORKING_DIRECTORY }}/StorePortal" # App source code path
+          ###api_location: "api" # Api source code path - optional
+          output_location: "public" # Built app content directory - optional
+          ###### End of Repository/Build Configurations ######
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
