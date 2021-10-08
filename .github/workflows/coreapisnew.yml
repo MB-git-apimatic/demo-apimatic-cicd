@@ -29,7 +29,7 @@ jobs:
       run: |
         curl --location --request POST 'https://www.apimatic.io/api/portal' --header 'Authorization: X-Auth-Key uTmxzngzCkKBvmtmr_LcXbuUQsAOYAmhvCkKyZqyRcTGv2lmHwNXcX-6RuAOvuus' --form 'file=@"${{ env.WORKING_DIRECTORY }}/APIMatic.zip"' -o  "${{ env.WORKING_DIRECTORY }}/StorePortal.zip"
     - name: Decompress Portal.zip
-      run: 7z x "${{ env.WORKING_DIRECTORY }}/StorePortal.zip" -o"${{ github.workspace }}/StorePortal"
+      run: 7z x "${{ env.WORKING_DIRECTORY }}/StorePortal.zip" -o"${{ env.WORKING_DIRECTORY }}/StorePortal"
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Deploy to Azure WebApp
