@@ -2,8 +2,11 @@
   "$schema": "https://titan.apimatic.io/api/build/schema",
   "buildFileVersion": "1",
   "generatePortal": {
+    "pageTitle": "Whether Forecast Portal",
+    "navTitle": "Demo - Whether Forecast Portal",
     "languageConfig": {
-      "http": {}
+      "http": {},
+      "csharp": {}
     }
   }
 }
