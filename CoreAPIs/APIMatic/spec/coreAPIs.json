@@ -54,7 +54,7 @@
                                                                                        {
                                                                                            "name":  "forecastId",
                                                                                            "in":  "path",
-                                                                                           "description":  "The forecast identifier.",
+                                                                                           "description":  "The forecast Id changed.",
                                                                                            "required":  true,
                                                                                            "schema":  {
                                                                                                           "type":  "integer",

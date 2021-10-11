@@ -7,7 +7,8 @@
     "languageConfig": {
       "http": {},
       "csharp": {},
-      "ruby": {}
+      "ruby": {},
+      "java": {}
     }
   }
 }
