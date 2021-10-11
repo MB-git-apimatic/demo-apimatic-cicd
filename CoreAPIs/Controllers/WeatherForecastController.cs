@@ -48,7 +48,7 @@ namespace CoreAPIs.Controllers
         /// <summary>
         /// Get the single Weather Forecast details by id.
         /// </summary>
-        /// <param name="forecastId">The forecast identifier.</param>
+        /// <param name="forecastId">The forecast Id changed.</param>
         /// <returns></returns>
         [HttpGet("{forecastId}")]
         public WeatherForecast GetById(int forecastId)
