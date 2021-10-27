@@ -4,6 +4,10 @@
   "generatePortal": {
     "pageTitle": "Whether Forecast Portal - Demo",
     "navTitle": "Whether Forecast Portal - Demo",
+    "apiSpecs": [
+      "spec1",
+      "spec2"
+    ],
     "languageConfig": {
       "http": {},
       "csharp": {},
