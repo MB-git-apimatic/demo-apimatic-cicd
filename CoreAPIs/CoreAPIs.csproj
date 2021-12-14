@@ -21,6 +21,14 @@
     <Folder Include="StorePortal\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="APIMatic\spec\spec1\coreAPIs.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="powershell.exe -file &quot;$(ProjectDir)Scripts\jsonScript.ps1&quot;&#xD;&#xA;&#xD;&#xA;if exist $(ProjectDir)\APIMatic.zip (  Del $(ProjectDir)\APIMatic.zip )&#xD;&#xA;powershell.exe -command Compress-Archive -Path $(ProjectDir)\APIMatic\* -DestinationPath $(ProjectDir)\APIMatic.zip" />
   </Target>
