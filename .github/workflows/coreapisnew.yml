@@ -4,7 +4,7 @@ on:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: coreapisnew
+  AZURE_WEBAPP_NAME: apimatic
   AZURE_WEBAPP_PACKAGE_PATH: CoreAPIs/publish
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.coreapisnew_caa0 }}
   CONFIGURATION: Release
