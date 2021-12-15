@@ -11,7 +11,7 @@ env:
   DOTNET_CORE_VERSION: 5.0.x
   WORKING_DIRECTORY: CoreAPIs
   AZURE_BLOB_CONN: ${{ secrets.AZURE_APIMATIC_CONNECTION_STRING }}
-  AZURE_BLOB_CONTAINER : apimaticwebsite
+  AZURE_BLOB_CONTAINER : apimaticcicddemo
 jobs:
   build-and-deploy:
     runs-on: windows-latest

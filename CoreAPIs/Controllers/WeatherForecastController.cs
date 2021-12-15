@@ -65,6 +65,7 @@ namespace CoreAPIs.Controllers
             return c.Where(x => x.id == forecastId).FirstOrDefault();
         }
 
+        /// GET /WeatherForecast/index/{index}
         /// <summary>
         /// Gets the index of the by.
         /// </summary>
