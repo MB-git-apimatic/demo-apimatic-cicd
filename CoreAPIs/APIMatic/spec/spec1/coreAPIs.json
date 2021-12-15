@@ -85,7 +85,49 @@
                                                                                               }
                                                                                   }
                                                                 }
-                                                    }
+                                                    },
+                  "/WeatherForecast/index/{indexId}":  {
+                                                           "get":  {
+                                                                       "tags":  [
+                                                                                    "WeatherForecast"
+                                                                                ],
+                                                                       "summary":  "Gets the index of the by.",
+                                                                       "parameters":  [
+                                                                                          {
+                                                                                              "name":  "indexId",
+                                                                                              "in":  "path",
+                                                                                              "description":  "The index identifier.",
+                                                                                              "required":  true,
+                                                                                              "schema":  {
+                                                                                                             "type":  "integer",
+                                                                                                             "format":  "int32"
+                                                                                                         }
+                                                                                          }
+                                                                                      ],
+                                                                       "responses":  {
+                                                                                         "200":  {
+                                                                                                     "description":  "Success",
+                                                                                                     "content":  {
+                                                                                                                     "text/plain":  {
+                                                                                                                                        "schema":  {
+                                                                                                                                                       "$ref":  "#/components/schemas/WeatherForecast"
+                                                                                                                                                   }
+                                                                                                                                    },
+                                                                                                                     "application/json":  {
+                                                                                                                                              "schema":  {
+                                                                                                                                                             "$ref":  "#/components/schemas/WeatherForecast"
+                                                                                                                                                         }
+                                                                                                                                          },
+                                                                                                                     "text/json":  {
+                                                                                                                                       "schema":  {
+                                                                                                                                                      "$ref":  "#/components/schemas/WeatherForecast"
+                                                                                                                                                  }
+                                                                                                                                   }
+                                                                                                                 }
+                                                                                                 }
+                                                                                     }
+                                                                   }
+                                                       }
               },
     "components":  {
                        "schemas":  {
