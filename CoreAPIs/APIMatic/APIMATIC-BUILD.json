@@ -5,8 +5,7 @@
     "pageTitle": "Whether Forecast Portal",
     "navTitle": "Whether Forecast Portal",
     "apiSpecs": [
-      "spec1",
-      "spec2"
+      "spec1"
     ],
     "languageConfig": {
       "http": {},
