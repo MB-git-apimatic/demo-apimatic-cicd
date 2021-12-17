@@ -1,32 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>\bin\Release\CoreAPIs\CoreAPIs.xml</DocumentationFile>
+	<DocumentationFile>\bin\Release\CoreAPIs\CoreAPIs.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>CoreAPIs\bin\Release\netcoreapp3.1\CoreAPIs.xml</DocumentationFile>
+	<DocumentationFile>CoreAPIs\bin\Release\netcoreapp3.1\CoreAPIs.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+	<PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="APIMatic\spec\spec1\coreAPIs.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+	<ItemGroup>
+		<Folder Include="APIMatic\spec\" />
+		<Folder Include="StorePortal\" />
+	</ItemGroup>
+
+	
+	<ItemGroup>
+	<Content Update="APIMatic\spec\spec1\coreAPIs.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	</Content>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="powershell.exe -file &quot;$(ProjectDir)Scripts\jsonScript.ps1&quot;&#xD;&#xA;&#xD;&#xA;if exist $(ProjectDir)\APIMatic.zip (  Del $(ProjectDir)\APIMatic.zip )&#xD;&#xA;powershell.exe -command Compress-Archive -Path $(ProjectDir)\APIMatic\* -DestinationPath $(ProjectDir)\APIMatic.zip" />
+	<Exec Command="powershell.exe -file &quot;$(ProjectDir)Scripts\jsonScript.ps1&quot;&#xD;&#xA;&#xD;&#xA;if exist $(ProjectDir)\APIMatic.zip (  Del $(ProjectDir)\APIMatic.zip )&#xD;&#xA;powershell.exe -command Compress-Archive -Path $(ProjectDir)\APIMatic\* -DestinationPath $(ProjectDir)\APIMatic.zip" />
   </Target>
 
 

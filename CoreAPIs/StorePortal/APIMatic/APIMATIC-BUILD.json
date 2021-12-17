@@ -11,8 +11,7 @@
     "languageConfig": {
       "http": {},
       "csharp": {},
-      "ruby": {},
-      "java": {}
+      "ruby": {}
     }
   }
 }
